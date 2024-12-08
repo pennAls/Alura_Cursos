@@ -1,0 +1,16 @@
+.sectionForm  button {
+    background-color: #3f2409;
+    padding: 20px;
+    border-radius: 16px;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    margin-right: 10%;
+    font-weight: bold;
+  }
+  
+  .sectionForm  button:hover {
+    background-color: #7f5514;
+    cursor: pointer;
+    scroll-behavior: smooth;
+  }

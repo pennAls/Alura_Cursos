@@ -7,12 +7,14 @@
   .campoForm label {
     font-size: 1.3rem;
     margin-bottom: 8px;
+    font-family: sans-serif;
   }
   
   .campoForm input {
       background-color: #FFF;
       width: 100%;
       border: none;
+      font-family: sans-serif;
       border-radius: 12px;
       box-shadow: 8px 8px 16px rgba(0, 0 ,0, 0.08);
       font-size: 1rem;

@@ -21,19 +21,3 @@
   text-align: center;
 }
 
-.sectionForm  button {
-  background-color: #debc14;
-  padding: 16px;
-  border-radius: 16px;
-  color: black;
-  border: none;
-  font-size: 1rem;
-  margin-right: 10%;
-  font-weight: bold;
-}
-
-.sectionForm  button:hover {
-  background-color: #f8f390;
-  cursor: pointer;
-  scroll-behavior: smooth;
-}
