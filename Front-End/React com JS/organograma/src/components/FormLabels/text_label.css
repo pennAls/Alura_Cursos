@@ -1,0 +1,32 @@
+.campoForm {
+    display: flex;
+    flex-direction: column;
+    margin: 24px 0;
+  }
+  
+  .campoForm label {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+  
+  .campoForm input {
+      background-color: #FFF;
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 8px 8px 16px rgba(0, 0 ,0, 0.08);
+      font-size: 1rem;
+      padding: 24px;
+      box-sizing: border-box;
+  }
+  
+  #ranking-select{
+    background-color: #FFF;
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 8px 8px 16px rgba(0, 0 ,0, 0.08);
+    font-size: 1rem;
+    padding: 24px;
+    box-sizing: border-box;
+  }

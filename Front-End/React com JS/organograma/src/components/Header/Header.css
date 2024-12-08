@@ -1,0 +1,83 @@
+.headerBanner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 48px;
+  padding-left: 48px;
+  max-width: 100%;
+  justify-content: space-between;
+}
+
+.headerNav {
+  display: flex;
+  margin-right: 5%;
+}
+
+.titlePage {
+  margin-right: auto;
+}
+
+.headerBanner span {
+  color: #f2e340;
+  font-size: 1.7rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 700;
+}
+
+.headerBanner li {
+  color: white;
+  list-style: none;
+  font-size: 1.1rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 700;
+}
+
+.headerBanner ul {
+  display: flex;
+  justify-content: right;
+  flex-direction: row;
+  gap: 48px;
+}
+
+.headerBanner li:hover {
+  color: #eed421;
+  cursor: pointer;
+}
+
+.headerBanner button {
+  background-color: #debc14;
+  padding: 16px;
+  border-radius: 16px;
+  color: black;
+  border: none;
+  font-size: 1rem;
+  margin-right: 10%;
+  font-weight: bold;
+}
+
+.headerBanner button:hover {
+  background-color: #f8f390;
+  cursor: pointer;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .headerNav {
+    display: none;
+  }
+  span {
+    font-size: 1.3rem;
+  }
+  button {
+    font-size: 0.8rem;
+    padding: 12px;
+  }
+
+  .headerBanner {
+    padding: 24px;
+  }
+}

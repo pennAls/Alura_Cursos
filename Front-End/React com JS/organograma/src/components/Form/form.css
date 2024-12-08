@@ -1,0 +1,39 @@
+.sectionForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+  background-color: #ffff
+  
+}
+
+.sectionForm form{
+  max-width: 80%;
+  min-width: 50%;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  padding: 36px 64px;
+  box-shadow: 8px 8px 16px rgba(0, 0 ,0, 0.08);
+}
+
+.sectionForm h2{
+  text-align: center;
+}
+
+.sectionForm  button {
+  background-color: #debc14;
+  padding: 16px;
+  border-radius: 16px;
+  color: black;
+  border: none;
+  font-size: 1rem;
+  margin-right: 10%;
+  font-weight: bold;
+}
+
+.sectionForm  button:hover {
+  background-color: #f8f390;
+  cursor: pointer;
+  scroll-behavior: smooth;
+}
