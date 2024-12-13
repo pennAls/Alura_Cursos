@@ -3,9 +3,9 @@ import "./text_label.css";
 export const TextLabel = (props) => {
   const aoDigitar = (event) => {
     const value = event.target.value;
-    if (!/\d/.test(value)) {
+    // if (!/\d/.test(value)) {
       props.aoAlterado(value);
-    }
+    // }
   };
   return (
     <div className="campoForm">

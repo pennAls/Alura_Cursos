@@ -5,16 +5,7 @@ import React, { useState } from "react";
 
 import "./form.css";
 
-export const Form = () => {
-  const rankings = [
-    "-- Classifique sua série --",
-    "Absolute Cinema",
-    "Muito Bom",
-    "Bom",
-    "Regular",
-    "Ruim",
-    "Quero arrancar meus olhos",
-  ];
+export const Form = (props) => {
 
   const [inputName, setName] = useState("");
   const [inputDescricao, setDescricao] = useState("");
@@ -24,13 +15,19 @@ export const Form = () => {
   const aoEnviar = (event) => {
     event.preventDefault();
     console.log(
-      `Forms Submetido 
+      `Forms Submetido
 
       Nome da Série: ${inputName}
       Descrição: ${inputDescricao}
       Imagem: ${inputImage}
       Ranking: ${ranking}`
     );
+    props.aoCadastrarSerie({
+      nome: inputName,
+      descricao: inputDescricao,
+      imagem: inputImage,
+      ranking,
+    });
   };
 
   return (
@@ -59,11 +56,11 @@ export const Form = () => {
             placeholder=" Insira uma imagem da série"
           />
           <Classificacao
-            value = {ranking}
+            value={ranking}
             aoAlterado={(valor) => setRanking(valor)}
             obrigatorio={true}
             label="Ranking"
-            itens={rankings}
+            itens={props.rankings.map((ranking) => ranking.rank)}
           />
           <BotaoForm>Adicionar Série</BotaoForm>
         </div>
