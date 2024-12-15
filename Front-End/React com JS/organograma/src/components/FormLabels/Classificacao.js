@@ -4,13 +4,17 @@ export const Classificacao = (props) => {
       <label>{props.label}</label>
       <select
         value={props.value}
-        onChange={(event) => props.aoAlterado(event.target.value)}
-        required={props.obrigatorio}
+        onChange={(event) => props.aoAlterado(event.target.value)} 
         name="ranking"
         id="ranking-select"
       >
+        <option value="" disabled>
+          Selecione uma opção
+        </option>
         {props.itens.map((item) => (
-          <option key={item}>{item}</option>
+          <option key={item} value={item}>
+            {item}
+          </option>
         ))}
       </select>
     </div>

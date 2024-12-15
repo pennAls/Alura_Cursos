@@ -1,0 +1,52 @@
+.divCard {
+  text-align: center;
+  width: 280px;
+  padding: 16px;
+}
+
+.divCard .secondHalf {
+  background-color: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 0px 0px 10px 10px;
+  padding-top: 40px;
+  padding-bottom: 16px;
+}
+
+.divCard .firstHalf {
+  border-radius: 10px 10px 0px 0px;
+
+}
+
+.divCard .imageCard {
+  width: 100px;
+  border-radius: 10%;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  bottom: -50px;
+}
+
+.divCard p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  line-height: 22px;
+  color: #212121;
+  padding: 0 16px;
+}
+
+.divCard h4 {
+  color: #442504;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.delete{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 16px;
+}

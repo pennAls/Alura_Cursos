@@ -3,6 +3,7 @@
     padding: 16px;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
 }
 
@@ -11,4 +12,12 @@
     border-bottom: 4px solid ;
     display: inline-block;
     padding-bottom: 8px;
+}
+
+.rankFila{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 8px;
+    flex-wrap: wrap;
 }

@@ -49,13 +49,17 @@ function App() {
     <div className="App">
       <Header />
       <Section1 />
-      <Form rankings = {rankings} aoCadastrarSerie={(serie) => CadastrarSerie(serie)} />
+      <Form
+        rankings={rankings}
+        aoCadastrarSerie={(serie) => CadastrarSerie(serie)}
+      />
       {rankings.map((ranking) => (
         <Ranking
-          rank={ranking.rank}
+          rankCategoty={ranking.rank}
           key={ranking.rank}
           corPrimaria={ranking.corPrimaria}
           corSecundaria={ranking.corSecundaria}
+          series={series.filter((serie) => serie.ranking === ranking.rank)}
         />
       ))}
     </div>

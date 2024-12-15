@@ -1,0 +1,10 @@
+.deleteBotao {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background-color: black;
+  scroll-behavior: smooth;
+}
+
+.deleteBotao img {
+  width: 24px !important;
+}
