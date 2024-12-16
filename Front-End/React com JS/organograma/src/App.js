@@ -39,6 +39,7 @@ function App() {
   ];
 
   const [series, setSerie] = useState([]);
+ 
 
   const CadastrarSerie = (serie) => {
     console.log(serie);
@@ -55,11 +56,12 @@ function App() {
       />
       {rankings.map((ranking) => (
         <Ranking
-          rankCategoty={ranking.rank}
           key={ranking.rank}
+
           corPrimaria={ranking.corPrimaria}
           corSecundaria={ranking.corSecundaria}
           series={series.filter((serie) => serie.ranking === ranking.rank)}
+          seriesArray={series}
         />
       ))}
     </div>

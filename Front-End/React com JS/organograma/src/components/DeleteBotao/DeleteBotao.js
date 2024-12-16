@@ -1,12 +1,7 @@
-
-import "./deletebotao.css";
-
-export const DeleteBotao = () => {
+export const DeleteBotao = ({ deleteCard, cardId }) => {
   return (
-    <button className="deleteBotao">
-      
-        <img src="/imgs/red-trash-can-icon.png" alt="Banner" />
-       
+    <button onClick={() => deleteCard(cardId)} className="deleteBotao">
+      <img src="/imgs/red-trash-can-icon.png" alt="Delete" />
     </button>
   );
 };
