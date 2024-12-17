@@ -3,6 +3,7 @@
   border-radius: 8px;
   background-color: black;
   scroll-behavior: smooth;
+  cursor: pointer;
 }
 
 .deleteBotao img {

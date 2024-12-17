@@ -4,10 +4,9 @@ import "./card.css";
 export const Card = ({
   img,
   nome,
+  deletarCard,
   descricao,
   corPrimaria,
-  seriesArray,
-  id,
 }) => {
   return (
     <div className="divCard">
@@ -18,7 +17,7 @@ export const Card = ({
         <h4>{nome}</h4>
         <p>{descricao}</p>
         <div className="delete">
-          <DeleteBotao cardId={id} seriesCard={seriesArray} />
+          <DeleteBotao deleteCard={deletarCard}/>
         </div>
       </div>
     </div>
