@@ -13,8 +13,8 @@ const Ranking = (props) => {
       >
         <h3 style={{ borderColor: props.corPrimaria }}>{props.rankCategory}</h3>
         <div className="rankFila">
-          {props.series.map((serie, index) => (
-            <SerieContext.Provider key={index} value={{ aoDeletarSerie: () => props.aoDeletarSerie(serie) }}>    {/* TODOS OS FILHOS DE CARD VÃO TER ACESSO A ESSE VALUE */}
+          {props.series.map((serie) => (
+           <SerieContext.Provider key={serie.nome} value={{ aoDeletarSerie: () => props.aoDeletarSerie(serie) }}> {/* Passando o objeto completo da serie */}    {/* TODOS OS FILHOS DE CARD VÃO TER ACESSO A ESSE VALUE */}
               <Card
                 img={serie.imagem}
                 nome={serie.nome}

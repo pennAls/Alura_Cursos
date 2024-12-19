@@ -62,13 +62,12 @@ function App() {
           corSecundaria={ranking.corSecundaria}
           series={series.filter((serie) => serie.ranking === ranking.rank)}
           aoDeletarSerie={(serie) => {
-            const updatedSeries = [...series];
-            updatedSeries.splice(serie, 1);
+            const updatedSeries = series.filter((s) => s !== serie);
             setSerie(updatedSeries);
           }}
         />
       ))}
-      <Footer/>
+      <Footer />
     </div>
   );
 }
