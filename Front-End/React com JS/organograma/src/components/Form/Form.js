@@ -28,6 +28,10 @@ export const Form = (props) => {
       imagem: inputImage,
       ranking,
     });
+    setName("")
+    setDescricao("")
+    setImage("")
+    setRanking("")
   };
 
   return (

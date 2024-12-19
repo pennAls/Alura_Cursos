@@ -6,6 +6,8 @@
   align-items: center;
   gap: 64px;
   background-color: #e7e9dc;
+  flex-wrap:  wrap;
+  padding: 24px;
 }
 
 .section1 img {
@@ -35,4 +37,23 @@
   font-size: 2.2rem;
   font-family: sans-serif;
   font-weight: 800;
+}
+
+@media(max-width:768px){
+  .section1 img {
+    max-width: 100%;
+    width: 300px;
+  }
+  .section1 h1{
+    font-size: 1.5rem;
+  }
+  .section1{
+    gap: 24px;
+    width: fit-content;
+  }
+  .p1{
+    display: flex;
+    flex-wrap: wrap;
+  }
+ 
 }

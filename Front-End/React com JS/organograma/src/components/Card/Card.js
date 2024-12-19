@@ -1,13 +1,7 @@
 import DeleteBotao from "../DeleteBotao";
 import "./card.css";
 
-export const Card = ({
-  img,
-  nome,
-  deletarCard,
-  descricao,
-  corPrimaria,
-}) => {
+export const Card = ({ img, nome,descricao, corPrimaria }) => {
   return (
     <div className="divCard">
       <div className="firstHalf" style={{ backgroundColor: corPrimaria }}>
@@ -17,7 +11,7 @@ export const Card = ({
         <h4>{nome}</h4>
         <p>{descricao}</p>
         <div className="delete">
-          <DeleteBotao deleteCard={deletarCard}/>
+          {<DeleteBotao /* deleteCard={deletarCard}*/ />}   {/* SEM REACT CONTEXT */}
         </div>
       </div>
     </div>
