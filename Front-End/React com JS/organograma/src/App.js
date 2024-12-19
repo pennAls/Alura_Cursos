@@ -3,6 +3,7 @@ import Form from "./components/Form";
 import Header from "./components/Header";
 import Section1 from "./components/Section_1/Section_1";
 import Ranking from "./components/Ranking";
+import Footer from "./components/Footer";
 
 function App() {
   const rankings = [
@@ -67,6 +68,7 @@ function App() {
           }}
         />
       ))}
+      <Footer/>
     </div>
   );
 }
