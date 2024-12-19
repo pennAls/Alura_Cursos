@@ -57,7 +57,7 @@ export const Form = (props) => {
             value={inputImage}
             aoAlterado={(valor) => setImage(valor)}
             label="Imagem"
-            placeholder=" Insira uma imagem da série"
+            placeholder=" Insira uma imagem da série (URL)"
           />
           <Classificacao
             value={ranking}
