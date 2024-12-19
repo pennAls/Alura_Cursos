@@ -14,7 +14,7 @@ const Ranking = (props) => {
         <h3 style={{ borderColor: props.corPrimaria }}>{props.rankCategory}</h3>
         <div className="rankFila">
           {props.series.map((serie, index) => (
-            <SerieContext.Provider key={index} value={{ aoDeletarSerie: () => props.aoDeletarSerie(index) }}>    {/* TODOS OS FILHOS DE CARD VÃO TER ACESSO A ESSE VALUE */}
+            <SerieContext.Provider key={index} value={{ aoDeletarSerie: () => props.aoDeletarSerie(serie) }}>    {/* TODOS OS FILHOS DE CARD VÃO TER ACESSO A ESSE VALUE */}
               <Card
                 img={serie.imagem}
                 nome={serie.nome}

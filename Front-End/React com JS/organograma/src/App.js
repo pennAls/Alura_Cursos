@@ -61,9 +61,9 @@ function App() {
           corPrimaria={ranking.corPrimaria}
           corSecundaria={ranking.corSecundaria}
           series={series.filter((serie) => serie.ranking === ranking.rank)}
-          aoDeletarSerie={(index) => {
+          aoDeletarSerie={(serie) => {
             const updatedSeries = [...series];
-            updatedSeries.splice(index, 1);
+            updatedSeries.splice(serie, 1);
             setSerie(updatedSeries);
           }}
         />
