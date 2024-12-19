@@ -3,8 +3,11 @@ Este projeto tem como objetivo criar uma aplicação de rank de séries usando R
 
 Funcionalidades do Projeto
 Classificação de Séries: Os usuários podem adicionar suas séries favoritas e atribuir uma pontuação para cada uma.
+
 Exibição do Ranking: A aplicação exibe as séries em uma lista ordenada com base nas classificações fornecidas pelos usuários.
+
 Interatividade Dinâmica: Usando o hook useState, a interface é atualizada de forma reativa sempre que o usuário faz uma mudança nas classificações.
+
 Tecnologias Utilizadas
 React: Framework utilizado para construir a interface de usuário.
 useState: Hook utilizado para gerenciar o estado local, como a lista de séries e suas classificações.
