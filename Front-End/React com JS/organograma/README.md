@@ -1,3 +1,19 @@
+# Projeto de Rank de Séries com React
+Este projeto tem como objetivo criar uma aplicação de rank de séries usando React. A ideia é permitir que os usuários possam classificar suas séries favoritas, ver as classificações atuais e interagir de forma dinâmica com a interface. A aplicação foi desenvolvida utilizando os conceitos do React, como useState e React Context, para gerenciar o estado e a interação entre os componentes de forma eficiente.
+
+Funcionalidades do Projeto
+Classificação de Séries: Os usuários podem adicionar suas séries favoritas e atribuir uma pontuação para cada uma.
+Exibição do Ranking: A aplicação exibe as séries em uma lista ordenada com base nas classificações fornecidas pelos usuários.
+Interatividade Dinâmica: Usando o hook useState, a interface é atualizada de forma reativa sempre que o usuário faz uma mudança nas classificações.
+Tecnologias Utilizadas
+React: Framework utilizado para construir a interface de usuário.
+useState: Hook utilizado para gerenciar o estado local, como a lista de séries e suas classificações.
+React Context: Para gerenciar o estado global, permitindo que informações como o ranking das séries sejam compartilhadas entre diferentes componentes sem a necessidade de passar props manualmente entre eles.
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
