@@ -3,11 +3,12 @@
   flex-direction: row;
   align-items: center;
   width: 100%;
-  background-color: black;
+  background-color: #debc14;
   padding-top: 16px;
   padding-bottom: 16px;
   padding-right: 48px;
   padding-left: 48px;
+  box-shadow: 8px 8px 16px rgba(0, 0 ,0, 0.08);
   max-width: 100%;
   justify-content: space-between;
 }
@@ -22,14 +23,14 @@
 }
 
 .headerBanner span {
-  color: #f2e340;
+  color: black;
   font-size: 1.7rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .headerBanner li {
-  color: white;
+  color: black;
   list-style: none;
   font-size: 1.1rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -44,12 +45,12 @@
 }
 
 .headerBanner li:hover {
-  color: #eed421;
+  color: white;
   cursor: pointer;
 }
 
 .headerBanner button {
-  background-color: #debc14;
+  background-color: white;
   padding: 16px;
   border-radius: 16px;
   color: black;

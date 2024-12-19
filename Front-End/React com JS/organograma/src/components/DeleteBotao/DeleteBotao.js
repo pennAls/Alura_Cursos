@@ -7,7 +7,7 @@ export const DeleteBotao = () => {
 
   return (
     <button onClick={aoDeletarSerie} className="deleteBotao">
-      <img src="/imgs/red-trash-can-icon.png" alt="Delete" />
+      <img src="/imgs/red-trash-can-icon.png" alt="Delete_botão" />
     </button>
   );
 };

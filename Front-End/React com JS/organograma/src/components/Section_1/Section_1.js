@@ -14,7 +14,7 @@ function Section1() {
         </ol>
       </div>
       <div className = "p2">
-        <img src="/imgs/Banner.png" alt="logo_imagem"></img>
+        <img src="/imgs/cinema.png" alt="logo_imagem"></img>
       </div>
     </section>
   );
