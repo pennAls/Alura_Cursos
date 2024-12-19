@@ -1,89 +1,43 @@
-# Projeto de Rank de Séries com React
-Este projeto tem como objetivo criar uma aplicação de rank de séries usando React. A ideia é permitir que os usuários possam classificar suas séries favoritas, ver as classificações atuais e interagir de forma dinâmica com a interface. A aplicação foi desenvolvida utilizando os conceitos do React, como useState e React Context, para gerenciar o estado e a interação entre os componentes de forma eficiente.
+Projeto de Rank de Séries com React
+Este projeto tem como objetivo criar uma aplicação de rank de séries utilizando React. A ideia é permitir que os usuários possam adicionar suas séries favoritas, atribuir notas a elas e visualizar um ranking ordenado com base nas classificações. A aplicação foi desenvolvida com o uso de conceitos do React, como o useState e React Context, que facilitam o gerenciamento de estados locais e globais, respectivamente, e garantem uma experiência interativa e eficiente.
 
 Funcionalidades do Projeto
-Classificação de Séries: Os usuários podem adicionar suas séries favoritas e atribuir uma pontuação para cada uma.
-
-Exibição do Ranking: A aplicação exibe as séries em uma lista ordenada com base nas classificações fornecidas pelos usuários.
-
-Interatividade Dinâmica: Usando o hook useState, a interface é atualizada de forma reativa sempre que o usuário faz uma mudança nas classificações.
-
+Classificação de Séries: Usuários podem adicionar suas séries favoritas e atribuir uma pontuação para cada uma, permitindo uma avaliação personalizada.
+Exibição do Ranking: A aplicação apresenta as séries em uma lista ordenada com base nas classificações fornecidas pelos usuários, oferecendo uma visão clara do ranking.
+Interatividade Dinâmica: A interface da aplicação é reativa, sendo atualizada automaticamente sempre que o usuário faz mudanças nas classificações, graças ao hook useState.
 Tecnologias Utilizadas
-React: Framework utilizado para construir a interface de usuário.
-useState: Hook utilizado para gerenciar o estado local, como a lista de séries e suas classificações.
-React Context: Para gerenciar o estado global, permitindo que informações como o ranking das séries sejam compartilhadas entre diferentes componentes sem a necessidade de passar props manualmente entre eles.
+React: Framework utilizado para construir a interface de usuário de forma eficiente e declarativa.
+useState: Hook do React utilizado para gerenciar o estado local, como a lista de séries e suas respectivas classificações.
+React Context: Usado para gerenciar o estado global da aplicação, permitindo que as informações sobre o ranking das séries sejam acessadas e compartilhadas entre diferentes componentes sem a necessidade de passar props manualmente.
+Getting Started with Create React App
+Este projeto foi inicializado com Create React App, uma ferramenta oficial do React que configura automaticamente o ambiente de desenvolvimento.
 
+Scripts Disponíveis
+No diretório do projeto, você pode executar os seguintes scripts:
 
+npm start
+Inicia a aplicação em modo de desenvolvimento.
+Abra http://localhost:3000 no seu navegador para visualizá-la.
 
+A página será recarregada automaticamente quando você fizer alterações no código.
+Você também verá quaisquer erros de lint no console.
 
+npm test
+Inicia o runner de testes em modo interativo.
+Para mais informações sobre como rodar testes, consulte a seção de testes do Create React App.
 
-# Getting Started with Create React App
+npm run build
+Cria uma versão otimizada da aplicação para produção na pasta build.
+Ela irá corretamente agrupar o React em modo de produção e otimizar o build para a melhor performance possível.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O build será minificado e os nomes dos arquivos incluirão hashes.
+Sua aplicação estará pronta para ser implantada.
 
-## Available Scripts
+Veja a seção de deploy para mais informações.
 
-In the project directory, you can run:
+npm run eject
+Atenção: esta é uma operação irreversível. Após o comando eject, você não poderá voltar atrás!
 
-### `npm start`
+Caso não esteja satisfeito com as configurações padrão do Create React App, você pode "ejetar" a configuração a qualquer momento. Isso removerá a dependência única de build e copiará todas as configurações (como webpack, Babel, ESLint, etc.) diretamente para o seu projeto, permitindo que você tenha controle total sobre elas. Todos os outros comandos, exceto o eject, ainda funcionarão, mas apontarão para os scripts copiados, permitindo que você os modifique conforme necessário.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Você não precisa usar o comando eject caso as configurações padrão atendam às suas necessidades.
