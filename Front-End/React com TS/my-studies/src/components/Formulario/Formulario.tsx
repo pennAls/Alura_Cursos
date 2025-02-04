@@ -2,6 +2,7 @@ import React from "react";
 import Botao from "../Botao";
 import style from "./Formulario.module.scss";
 import { Itarefa } from "../../types/Itarefa";
+import { v4 as uuidv4 } from "uuid";
 
 export class Formulario extends React.Component<{
   setTarefas: React.Dispatch<React.SetStateAction<Itarefa[]>>;
@@ -16,8 +17,9 @@ export class Formulario extends React.Component<{
       e.preventDefault();
       this.props.setTarefas((tarefasAntigas) => [
         ...tarefasAntigas,
-        { ...this.state },
-      ]);
+        { ...this.state, selected: false, completed: false, id: uuidv4() },
+      ]
+    );
       this.setState({ tarefa: "", tempo: "" });
     };
 
