@@ -1,18 +1,36 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Itarefa } from "../../../types/Itarefa";
-import style from '../Lista.module.scss';
+import style from "../Lista.module.scss";
+import { SelectContext } from "../../../App";
 
 export const Item = ({ tarefa, tempo, selected, completed, id }: Itarefa) => {
+const {selectTarefa} = useContext(SelectContext);
+
   useEffect(() => {
-    console.log("item atual renderizado: ", { tarefa, tempo, selected, completed, id });
+    console.log("item atual renderizado: ", {
+      tarefa,
+      tempo,
+      selected,
+      completed,
+      id,
+    });
   }, [tarefa, tempo, selected, completed, id]);
 
   return (
-    <li className ={style.item}>
+    <li
+      onClick={() =>
+        selectTarefa({
+          tarefa,
+          id,
+          tempo,
+          selected,
+          completed,
+        })
+      }
+      className={`${style.item} ${selected ? style.itemSelecionado : ''}`}
+    >
       <h3>{tarefa}</h3>
       <span>{tempo}</span>
     </li>
   );
 };
-
-
