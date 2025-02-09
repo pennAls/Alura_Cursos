@@ -11,23 +11,33 @@ export const SelectContext = createContext<{
   selectTarefa: () => {},
 });
 
+export const TarefaContext = createContext<{ selectedTarefa: Itarefa | {} }>({
+  selectedTarefa: {},
+});
+
 function App() {
   const [tarefas, setTarefas] = useState<Itarefa[]>([]);
   const [selectedTarefa, setSelectedTarefa] = useState<Itarefa | {}>({});
 
   const selectTarefa = (selectedTarefa: Itarefa) => {
     setSelectedTarefa(selectedTarefa);
-    setTarefas(tarefasAntigas => tarefasAntigas.map((tarefa) => ({...tarefa,selected: tarefa.id === selectedTarefa.id ? true:false
-    })))
-  
+    setTarefas((tarefasAntigas) =>
+      tarefasAntigas.map((tarefa) => ({
+        ...tarefa,
+        selected: tarefa.id === selectedTarefa.id ? true : false,
+      }))
+    );
   };
+
   return (
     <SelectContext.Provider value={{ selectTarefa }}>
-      <div className={style.AppStyle}>
-        <Formulario setTarefas={setTarefas} />
-        <Lista tarefas={tarefas} />
-        <Cronometro />
-      </div>
+      <TarefaContext.Provider value={{ selectedTarefa }}>
+        <div className={style.AppStyle}>
+          <Formulario setTarefas={setTarefas} />
+          <Lista tarefas={tarefas} />
+          <Cronometro/>
+        </div>
+      </TarefaContext.Provider>
     </SelectContext.Provider>
   );
 }
