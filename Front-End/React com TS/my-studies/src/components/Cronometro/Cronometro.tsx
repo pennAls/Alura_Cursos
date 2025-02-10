@@ -6,23 +6,38 @@ import style from "./cronometro.module.scss";
 import { timeToSeconds } from "../../common/utils/time";
 import { Itarefa } from "../../types/Itarefa";
 
-export const Cronometro = () => {
+export const Cronometro = ({ finishTarefa }: { finishTarefa: () => void }) => {
   const { selectedTarefa } = useContext(TarefaContext);
   const tempo = (selectedTarefa as Itarefa)?.tempo ?? "00:00:00";
-  const [tempoState, setTempo] = useState<number>();
+  const [tempoSeconds, setTempo] = useState<number>(0);
 
   useEffect(() => {
     setTempo(timeToSeconds(tempo));
   }, [selectedTarefa, tempo]);
 
+  const regressiva = (tempo: number) => {
+    setTimeout(() => {
+      if (tempo > 0) {
+        setTempo((tempo -= 1));
+        return regressiva(tempo);
+      }
+      finishTarefa()
+    }, 1000);
+  };
+
   return (
     <div className={style.cronometro}>
-      Tempo:{tempoState}
       <p className={style.titulo}>Escolha um Card e inicie o cronômetro</p>
       <div className={style.relogioWrapper}>
-        <Relogio />
+        <Relogio tempo={tempoSeconds} />
       </div>
-      <Botao>Começar</Botao>
+      <Botao
+        onClick={() => {
+          regressiva(tempoSeconds);
+        }}
+      >
+        Começar
+      </Botao>
     </div>
   );
 };
