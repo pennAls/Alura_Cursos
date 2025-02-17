@@ -13,7 +13,9 @@ export const SelectContext = createContext<{
 
 export const TarefaContext = createContext<{
   selectedTarefa: Itarefa | undefined;
+  tarefas: Itarefa[];
 }>({
+  tarefas: [],
   selectedTarefa: undefined,
 });
 
@@ -37,8 +39,9 @@ function App() {
       setTarefas((tarefasAntigas) =>
         tarefasAntigas.map((tarefa) => ({
           ...tarefa,
-          completed: tarefa.id === selectedTarefa?.id ? true : false,
+          completed: tarefa.id === selectedTarefa.id ? true : tarefa.completed,
           selected: false,
+          isCronometroRodando: false,
         }))
       );
     }
@@ -46,11 +49,11 @@ function App() {
 
   return (
     <SelectContext.Provider value={{ selectTarefa }}>
-      <TarefaContext.Provider value={{ selectedTarefa }}>
+      <TarefaContext.Provider value={{ selectedTarefa, tarefas }}>
         <div className={style.AppStyle}>
           <Formulario setTarefas={setTarefas} />
           <Lista tarefas={tarefas} />
-          <Cronometro finishTarefa={finishTarefa} />
+          <Cronometro finishTarefa={finishTarefa} setTarefas={setTarefas} />
         </div>
       </TarefaContext.Provider>
     </SelectContext.Provider>

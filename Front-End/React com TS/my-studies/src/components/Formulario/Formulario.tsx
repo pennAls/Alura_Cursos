@@ -17,9 +17,14 @@ export class Formulario extends React.Component<{
       e.preventDefault();
       this.props.setTarefas((tarefasAntigas) => [
         ...tarefasAntigas,
-        { ...this.state, selected: false, completed: false, id: uuidv4() },
-      ]
-    );
+        {
+          ...this.state,
+          selected: false,
+          completed: false,
+          id: uuidv4(),
+          isCronometroRodando: false,
+        },
+      ]);
       this.setState({ tarefa: "", tempo: "" });
     };
 

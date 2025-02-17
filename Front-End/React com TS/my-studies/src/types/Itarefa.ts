@@ -4,4 +4,5 @@ export interface Itarefa {
     selected:boolean;
     completed:boolean;
     id:string
+    isCronometroRodando?:boolean
   }
