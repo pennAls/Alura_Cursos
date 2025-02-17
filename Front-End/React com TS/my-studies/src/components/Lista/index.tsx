@@ -1,2 +1,2 @@
-import { Lista } from "./Lista";
-export default Lista;
+import {Lista} from "./Lista"
+export default Lista

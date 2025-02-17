@@ -1,14 +1,14 @@
 import { Itarefa } from "../../types/Itarefa";
-import Item from "./index"
+import Item from "./Item";
 import style from "./Lista.module.scss";
 
-export const Lista = ({tarefas}:{tarefas:Itarefa[]}) => {
+export const Lista = ({ tarefas }: { tarefas: Itarefa[] }) => {
   return (
     <aside className={style.listaTarefas}>
       <h2>Estudos do Dia</h2>
       <ul>
         {tarefas.map((item, index) => (
-          <Item tarefas={[]} key={index} {...item}></Item>
+          <Item key={index} {...item}></Item>
         ))}
       </ul>
     </aside>
