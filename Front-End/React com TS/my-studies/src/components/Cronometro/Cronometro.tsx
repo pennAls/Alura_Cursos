@@ -79,6 +79,7 @@ export const Cronometro = ({ finishTarefa, setTarefas }: Props) => {
         <Relogio tempo={tempoSeconds} />
       </div>
       <div>
+        <div className = {style.divButtons}>
         <Botao
           onClick={() => {
             if (isPaused.current) {
@@ -91,6 +92,7 @@ export const Cronometro = ({ finishTarefa, setTarefas }: Props) => {
           {isPaused.current ? "Retomar" : "Começar"}
         </Botao>
         <Botao onClick={pausarCronometro}>Pausar</Botao>
+        </div>
       </div>
     </div>
   );
