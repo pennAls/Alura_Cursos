@@ -1,5 +1,5 @@
 import { Itarefa } from "../../types/Itarefa";
-import Item from "./Item";
+import Item from "../Item";
 import style from "./Lista.module.scss";
 
 const Lista = ({ tarefas }: { tarefas: Itarefa[] }) => {

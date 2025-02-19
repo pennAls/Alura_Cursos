@@ -1,7 +1,7 @@
-import {useContext} from "react";
-import { Itarefa } from "../../../types/Itarefa";
-import style from "../Lista.module.scss";
-import { SelectContext, TarefaContext } from "../../../App";
+import { useContext } from "react";
+import { Itarefa } from "../../types/Itarefa";
+import style from "../Lista/Lista.module.scss";
+import { SelectContext, TarefaContext } from "../../App";
 
 const Item = ({
   tarefa,
@@ -12,7 +12,7 @@ const Item = ({
   isCronometroRodando,
 }: Itarefa) => {
   const { selectTarefa } = useContext(SelectContext);
-   const {tarefas} = useContext(TarefaContext);
+  const { tarefas } = useContext(TarefaContext);
 
   // useEffect(() => {
   //   console.log("item atual renderizado: ", {
@@ -25,7 +25,9 @@ const Item = ({
   // }, [tarefa, tempo, selected, completed, id]);
 
   const handleClick = () => {
-    const cronometroRodando = tarefas.some(tarefa => tarefa.isCronometroRodando);
+    const cronometroRodando = tarefas.some(
+      (tarefa) => tarefa.isCronometroRodando
+    );
     if (cronometroRodando) {
       alert("Pause a tarefa atual antes de mudar!");
     } else {

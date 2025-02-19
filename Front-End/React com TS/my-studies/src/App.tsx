@@ -1,5 +1,5 @@
 import Formulario from "./components/Formulario";
-import Lista from "./components/Lista";
+import Lista from "./components/Lista/";
 import style from "./App.module.scss";
 import Cronometro from "./components/Cronometro";
 import { useState, createContext } from "react";

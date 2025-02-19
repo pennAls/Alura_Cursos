@@ -61,10 +61,12 @@ export const Cronometro = ({ finishTarefa, setTarefas }: Props) => {
   const pausarCronometro = () => {
     if (timerRef.current) {
       clearTimeout(timerRef.current);
+      timerRef.current = null;
       isPaused.current = true;
       atualizarCronometroRodando(false);
     }
   };
+  
 
   const retomarCronometro = () => {
     isPaused.current = false;
@@ -82,6 +84,7 @@ export const Cronometro = ({ finishTarefa, setTarefas }: Props) => {
         <div className = {style.divButtons}>
         <Botao
           onClick={() => {
+            if (timerRef.current) return;
             if (isPaused.current) {
               retomarCronometro();
             } else {
