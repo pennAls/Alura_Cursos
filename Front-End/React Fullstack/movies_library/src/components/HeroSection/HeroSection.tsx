@@ -1,4 +1,5 @@
 import { Carrossel } from "../Carrossel/Carrossel";
+import SearchInput from "../SearchInput";
 import style from "./hero.module.css";
 
 export const HeroSection = () => {
@@ -22,11 +23,7 @@ export const HeroSection = () => {
       </div>
       <div className={style.halfTwo}>
         <Carrossel></Carrossel>
-        <input
-          className={style.input}
-          placeholder="Qual o seu próximo filme?"
-          type="text"
-        />
+        <SearchInput style={style.input}></SearchInput>
       </div>
     </section>
   );
