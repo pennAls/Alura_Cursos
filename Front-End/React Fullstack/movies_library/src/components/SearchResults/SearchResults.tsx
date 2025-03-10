@@ -18,7 +18,7 @@ export const SearchResults = ({
             width: 400,
             fontFamily: '"Shafarik", "Roboto", "Arial", serif',
           }}
-          cover={<img alt={movie.nome} src={movie.src} alt={movie.nome} />}
+          cover={<img alt={movie.nome} src={movie.src} />}
         >
           <Meta title={movie.nome} />
         </Card>
