@@ -1,10 +1,10 @@
-const express = require("express");
-const rotaLivros = require("./routes/livros");
-const app = express();
+import express from "express";
+import { rotaMovies } from "./routes/movies";
 
+const app = express();
 const port = 8000;
 
-app.use("/livros", rotaLivros);
+app.use("/movies", rotaMovies);
 
 app.listen(port, () => {
   console.log(`Escutando a porta ${port}`);

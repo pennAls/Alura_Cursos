@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ES6", // Define o padrão do JavaScript de saída
-    "module": "CommonJS", // Definindo o sistema de módulos como CommonJS para o Node.js
-    "outDir": "./dist", // Pasta de saída dos arquivos compilados
-    "rootDir": "./src", // Diretório onde os arquivos TypeScript vão ser armazenados
+    "target": "ES6",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "allowSyntheticDefaultImports": true, // Adicione esta linha
+    "resolveJsonModule": true, // Se você estiver usando arquivos JSON no código
 
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
