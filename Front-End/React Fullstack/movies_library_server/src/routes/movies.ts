@@ -1,10 +1,12 @@
 import { Router } from "express";
 import type { Request, Response } from "express";
-import { handleAdd, handleGet } from "../controls/moviesControl";
+import { handleAdd, handleGet, handleGetId } from "../controls/moviesControl";
 
 export const rotaMovies = Router();
 
 rotaMovies.get("/", handleGet);
+
+rotaMovies.get("/:id", handleGetId);
 
 rotaMovies.post("/", handleAdd);
 

@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { getCatalogo } from "../services/moviesService";
+import { getCatalogo, getMoviebyId } from "../services/moviesService";
 import { addMovie } from "../services/moviesService";
 
 const handleGet = (req: Request, res: Response) => {
@@ -15,9 +15,23 @@ const handleGet = (req: Request, res: Response) => {
   }
 };
 
+const handleGetId = (req: Request, res: Response) => {
+  try {
+    const id = req.params.id;
+    res.send(getMoviebyId(id));
+  } catch (error) {
+    res.status(500);
+    if (error instanceof Error) {
+      res.send(error.message);
+    } else {
+      res.send("Erro desconhecido");
+    }
+  }
+};
+
 const handleAdd = (req: Request, res: Response) => {
   try {
-    throw new Error("F");
+    // throw new Error("F");
     res.send(addMovie());
   } catch (error) {
     res.status(500);
@@ -29,4 +43,4 @@ const handleAdd = (req: Request, res: Response) => {
   }
 };
 
-export { handleAdd, handleGet };
+export { handleAdd, handleGet, handleGetId };
