@@ -23,7 +23,18 @@ const handleGet = (req: Request, res: Response) => {
 const handleGetId = (req: Request, res: Response) => {
   try {
     const id = req.params.id;
-    res.send(getMoviebyId(id));
+    if (id && Number(id)) {
+      const movie = getMoviebyId(id);
+      if (!movie) {
+        res.status(404);
+        res.send("Filme não encontrado");
+      } else {
+        res.send(movie);
+      }
+    } else {
+      res.status(422);
+      res.send("ID_INVÁLIDO");
+    }
   } catch (error) {
     res.status(500);
     if (error instanceof Error) {
@@ -37,9 +48,14 @@ const handleGetId = (req: Request, res: Response) => {
 const handleAdd = (req: Request, res: Response) => {
   try {
     const movieDto = req.body;
-    addMovie(movieDto);
-    res.status(201);
-    res.send(`Filme adicionado com sucesso`);
+    if (req.body.name) {
+      addMovie(movieDto);
+      res.status(201);
+      res.send(`Filme adicionado com sucesso`);
+    } else {
+      res.status(422);
+      res.send("O campo name é obrigatório");
+    }
   } catch (error) {
     res.status(500);
     if (error instanceof Error) {
@@ -54,9 +70,14 @@ const handlePatch = (req: Request, res: Response) => {
   try {
     const id = req.params.id;
     const movieDto = req.body;
-    patchMovie(id, movieDto);
-    res.status(200);
-    res.send("Filme editado com sucesso");
+    if (id && Number(id) && req.body.name) {
+      patchMovie(id, movieDto);
+      res.status(200);
+      res.send("Filme editado com sucesso");
+    } else {
+      res.status(422);
+      res.send("ID_INVÁLIDO");
+    }
   } catch (error) {
     res.status(500);
     if (error instanceof Error) {
@@ -69,9 +90,14 @@ const handlePatch = (req: Request, res: Response) => {
 const handleDelete = (req: Request, res: Response) => {
   try {
     const id = req.params.id;
-    deleteMovie(id);
-    res.status(200);
-    res.send("Filme deletado com sucesso");
+    if (id && Number(id)) {
+      deleteMovie(id);
+      res.status(200);
+      res.send("Filme deletado com sucesso");
+    } else {
+      res.status(422);
+      res.send("ID_INVÁLIDO");
+    }
   } catch (error) {
     res.status(500);
     if (error instanceof Error) {
