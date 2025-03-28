@@ -1,6 +1,12 @@
 import { Router } from "express";
 import type { Request, Response } from "express";
-import { handleAdd, handleGet, handleGetId } from "../controls/moviesControl";
+import {
+  handleAdd,
+  handleDelete,
+  handleGet,
+  handleGetId,
+  handlePatch,
+} from "../controls/moviesControl";
 
 export const rotaMovies = Router();
 
@@ -10,10 +16,6 @@ rotaMovies.get("/:id", handleGetId);
 
 rotaMovies.post("/", handleAdd);
 
-rotaMovies.delete("/", (req: Request, res: Response) => {
-  res.send("Tá querendo deletar oq aqui pvt");
-});
+rotaMovies.patch("/:id", handlePatch);
 
-rotaMovies.patch("/", (req: Request, res: Response) => {
-  res.send("Tá querendo editar oq aqui pvt");
-});
+rotaMovies.delete("/:id", handleDelete);

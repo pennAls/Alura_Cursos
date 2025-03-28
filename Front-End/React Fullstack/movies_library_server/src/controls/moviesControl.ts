@@ -1,5 +1,10 @@
 import type { Request, Response } from "express";
-import { getCatalogo, getMoviebyId } from "../services/moviesService";
+import {
+  deleteMovie,
+  getCatalogo,
+  getMoviebyId,
+  patchMovie,
+} from "../services/moviesService";
 import { addMovie } from "../services/moviesService";
 
 const handleGet = (req: Request, res: Response) => {
@@ -31,8 +36,10 @@ const handleGetId = (req: Request, res: Response) => {
 
 const handleAdd = (req: Request, res: Response) => {
   try {
-    // throw new Error("F");
-    res.send(addMovie());
+    const movieDto = req.body;
+    addMovie(movieDto);
+    res.status(201);
+    res.send(`Filme adicionado com sucesso`);
   } catch (error) {
     res.status(500);
     if (error instanceof Error) {
@@ -43,4 +50,36 @@ const handleAdd = (req: Request, res: Response) => {
   }
 };
 
-export { handleAdd, handleGet, handleGetId };
+const handlePatch = (req: Request, res: Response) => {
+  try {
+    const id = req.params.id;
+    const movieDto = req.body;
+    patchMovie(id, movieDto);
+    res.status(200);
+    res.send("Filme editado com sucesso");
+  } catch (error) {
+    res.status(500);
+    if (error instanceof Error) {
+      res.send(`${error.message}| Filme não Editado`);
+    } else {
+      res.send("Erro Desconhecido, por favor entre em contato com o suporte");
+    }
+  }
+};
+const handleDelete = (req: Request, res: Response) => {
+  try {
+    const id = req.params.id;
+    deleteMovie(id);
+    res.status(200);
+    res.send("Filme deletado com sucesso");
+  } catch (error) {
+    res.status(500);
+    if (error instanceof Error) {
+      res.send(`${error.message}| Filme não deletado`);
+    } else {
+      res.send("Erro Desconhecido, por favor entre em contato com o suporte");
+    }
+  }
+};
+
+export { handleAdd, handleGet, handleGetId, handlePatch, handleDelete };
