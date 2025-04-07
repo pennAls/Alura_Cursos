@@ -1,19 +1,29 @@
 import axios from "axios";
+import { moviesType } from "../types/moviesType";
 
 const moviesLibraryAPI = axios.create({
   baseURL: "http://localhost:8000/movies/",
 });
 
-const getMovies = () => {
-  moviesLibraryAPI
-    .get("/")
-    .then((response) => {
-      return response.data;
-    })
-    .catch((error) => {
-      console.log(error);
-    })
-    .finally(() => {});
+const getMovies = async () => {
+  try {
+    const response = await moviesLibraryAPI.get("/");
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
-export { getMovies };
+const addMovies = async (newMovie: moviesType) => {
+  try {
+    await moviesLibraryAPI.post("", {
+      nome: newMovie.nome,
+      src: newMovie.src,
+      id: newMovie.id,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export { getMovies, addMovies };

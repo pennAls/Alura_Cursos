@@ -48,7 +48,7 @@ const handleGetId = (req: Request, res: Response) => {
 const handleAdd = (req: Request, res: Response) => {
   try {
     const movieDto = req.body;
-    if (req.body.name) {
+    if (req.body.nome) {
       addMovie(movieDto);
       res.status(201);
       res.send(`Filme adicionado com sucesso`);

@@ -1,5 +1,5 @@
 export interface moviesType {
   nome: string;
-  id: number;
+  id: string;
   src: string;
 }

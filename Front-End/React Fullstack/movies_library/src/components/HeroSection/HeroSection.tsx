@@ -1,3 +1,4 @@
+import AddButton from "../Buttons/AddButton";
 import { Carrossel } from "../Carrossel/Carrossel";
 import SearchInput from "../SearchInput";
 import style from "./hero.module.css";
@@ -20,10 +21,11 @@ export const HeroSection = () => {
           Não sabe por onde começar? Salve suas produções favoritas, registre
           cada descoberta e organize sua coleção nas nossas estantes virtuais.
         </p>
+        <AddButton></AddButton>
       </div>
       <div className={style.halfTwo}>
         <Carrossel></Carrossel>
-        <SearchInput style={style.input}></SearchInput>
+        <SearchInput style={style.inputHero}></SearchInput>
       </div>
     </section>
   );

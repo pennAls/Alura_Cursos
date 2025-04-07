@@ -6,12 +6,8 @@ import { v4 as uuidv4 } from "uuid";
 interface movieI {
   id: string;
   nome: string;
+  src: string;
 }
-
-// const newMovie: Json = {
-//   id: uuidv4(),
-//   nome: "A bela e a fera",
-// };
 
 export const getCatalogo = () => JSON.parse(fs.readFileSync(filePath, "utf-8"));
 
