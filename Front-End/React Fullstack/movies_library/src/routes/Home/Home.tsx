@@ -1,9 +1,8 @@
 import { createContext, useState } from "react";
-import "./App.css";
-import Header from "./components/Header";
-import HeroSection from "./components/HeroSection";
-import { moviesType } from "./types/moviesType";
-import SearchResults from "./components/SearchResults";
+import "./home.css";
+import HeroSection from "../../components/HeroSection";
+import { moviesType } from "../../types/moviesType";
+import SearchResults from "../../components/SearchResults";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const searchContext = createContext<{
@@ -14,13 +13,12 @@ export const searchContext = createContext<{
   setSearchedMovies: () => [],
 });
 
-const App = () => {
+const Home = () => {
   const [searchedMovies, setSearchedMovies] = useState<moviesType[]>([]);
 
   return (
     <searchContext.Provider value={{ searchedMovies, setSearchedMovies }}>
       <div className="App">
-        <Header />
         <HeroSection />
         {searchedMovies.length > 0 && (
           <SearchResults searchedMovies={searchedMovies} />
@@ -30,4 +28,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;
