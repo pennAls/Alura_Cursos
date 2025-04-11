@@ -26,4 +26,13 @@ const addMovies = async (newMovie: moviesType) => {
   }
 };
 
-export { getMovies, addMovies };
+const getbyID = async (id: string) => {
+  try {
+    const response = await moviesLibraryAPI.get(`/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error("Erro ao buscar filme por ID:", error);
+  }
+};
+
+export { getMovies, addMovies, getbyID };

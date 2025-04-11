@@ -35,3 +35,12 @@ h3 {
     font-size: 1.25rem;
   }
 }
+
+:where(.noPaddingModal) .ant-modal-content {
+  border-radius: 8px !important;
+  padding: 0 !important;
+}
+
+:where(.noPaddingModal).ant-modal .ant-modal-close {
+  display: none;
+}

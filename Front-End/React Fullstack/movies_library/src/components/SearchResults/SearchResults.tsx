@@ -10,7 +10,12 @@ export const SearchResults = ({
   return (
     <div className={style.searchResultsBox}>
       {searchedMovies.map((movie) => (
-        <MovieBox key={movie.id} src={movie.src} title={movie.nome} />
+        <MovieBox
+          key={movie.id}
+          src={movie.src}
+          title={movie.nome}
+          id={movie.id}
+        />
       ))}
     </div>
   );

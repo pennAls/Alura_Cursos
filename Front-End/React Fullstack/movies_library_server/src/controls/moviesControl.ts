@@ -23,7 +23,7 @@ const handleGet = (req: Request, res: Response) => {
 const handleGetId = (req: Request, res: Response) => {
   try {
     const id = req.params.id;
-    if (id && Number(id)) {
+    if (id && String(id)) {
       const movie = getMoviebyId(id);
       if (!movie) {
         res.status(404);

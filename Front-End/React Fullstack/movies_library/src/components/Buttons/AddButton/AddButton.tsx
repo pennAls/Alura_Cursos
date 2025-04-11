@@ -30,6 +30,7 @@ export const AddButton = () => {
       </button>
 
       <Modal
+        className="formModal"
         title="Registrar novo Filme"
         open={open}
         onOk={handleOk}
